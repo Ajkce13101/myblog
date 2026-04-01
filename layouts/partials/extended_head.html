@@ -1,0 +1,8 @@
+{{/* layouts/partials/extended_head.html */}} {{ $style := resources.Get
+"css/custom.css" | minify | fingerprint }}
+<link
+  rel="stylesheet"
+  href="{{ $style.RelPermalink }}"
+  integrity="{{ $style.Data.Integrity }}"
+/>
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
