@@ -1,16 +1,15 @@
-+++
-
-title = "My First Post"
-
-date = "2026-04-01"
-
-author = "Ajaya K C"
-
-tags= ["AdGuard Home", "Docker", "Proxmox", "Homelab", "Network Security"]
-
-summary= "A step-by-step guide to deploying AdGuard Home in a Linux VM using Docker on a Proxmox homelab for network-wide DNS-level ad-blocking."
-
-+++
+---
+title: AdGuard setup for blocking ads
+date: 2026-04-01
+draft: false
+tags:
+  - homelab
+  - networking
+  - adguard
+  - dns
+  - proxmox
+  - linux
+---
 ## Introduction
 In this post, I will show how I deployed **AdGuard Home** in my home lab environment to achieve network-wide ad-blocking and DNS-level filtering. My homelab runs on **Proxmox**, with AdGuard Home inside a **Docker container** on a Linux virtual machine.
 

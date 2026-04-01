@@ -165,21 +165,10 @@
           <li><a href="../posts" >Posts</a></li>
         
       
+        
+          <li><a href="../tags" >Tags</a></li>
+        
       
-        <li>
-          <ul class="menu">
-            <li class="menu__trigger">Show more&nbsp;▾</li>
-            <li>
-              <ul class="menu__dropdown">
-                
-                  
-                    <li><a href="../tags" >Tags</a></li>
-                  
-                
-              </ul>
-            </li>
-          </ul>
-        </li>
       
     
   </ul>
@@ -196,22 +185,24 @@
     
       <article class="post on-list">
         <h2 class="post-title">
-          <a href="../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1-1-1-1-1/">My First Post</a>
+          <a href="../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox/">AdGuard setup for blocking ads</a>
         </h2>
-        <div class="post-meta"><time class="post-date">2026-04-01</time><span class="post-author">Ajaya K C</span></div>
+        <div class="post-meta"><time class="post-date">2026-04-01</time></div>
 
         
           <span class="post-tags">
             
-            #<a href="../tags/adguard-home/">AdGuard Home</a>&nbsp;
+            #<a href="../tags/homelab/">homelab</a>&nbsp;
             
-            #<a href="../tags/docker/">Docker</a>&nbsp;
+            #<a href="../tags/networking/">networking</a>&nbsp;
             
-            #<a href="../tags/proxmox/">Proxmox</a>&nbsp;
+            #<a href="../tags/adguard/">adguard</a>&nbsp;
             
-            #<a href="../tags/homelab/">Homelab</a>&nbsp;
+            #<a href="../tags/dns/">dns</a>&nbsp;
             
-            #<a href="../tags/network-security/">Network Security</a>&nbsp;
+            #<a href="../tags/proxmox/">proxmox</a>&nbsp;
+            
+            #<a href="../tags/linux/">linux</a>&nbsp;
             
           </span>
         
@@ -221,35 +212,42 @@
 
         <div class="post-content">
           
-            A step-by-step guide to deploying AdGuard Home in a Linux VM using Docker on a Proxmox homelab for network-wide DNS-level ad-blocking.
+            <h2 id="introduction">Introduction</h2>
+<p>In this post, I will show how I deployed <strong>AdGuard Home</strong> in my home lab environment to achieve network-wide ad-blocking and DNS-level filtering. My homelab runs on <strong>Proxmox</strong>, with AdGuard Home inside a <strong>Docker container</strong> on a Linux virtual machine.</p>
+<p>This setup allows all devices on my network to benefit from ad-blocking, tracking protection, and enhanced DNS management without installing software individually on each device.</p>
+<hr>
+<h2 id="why-adguard-home">Why AdGuard Home?</h2>
+<p>AdGuard Home is an open-source, self-hosted network-wide ad-blocker and DNS resolver. Its key benefits include:</p>
           
         </div>
 
         
            <div>
-            <a class="read-more button inline" href="../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1-1-1-1-1/">[Read more]</a>
+            <a class="read-more button inline" href="../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox/">[Read more]</a>
           </div>
         
       </article>
     
       <article class="post on-list">
         <h2 class="post-title">
-          <a href="../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1-1-1-1/">My First Post</a>
+          <a href="../posts/proxmox/">AdGuard setup for blocking ads</a>
         </h2>
-        <div class="post-meta"><time class="post-date">2026-04-01</time><span class="post-author">Ajaya K C</span></div>
+        <div class="post-meta"><time class="post-date">2026-03-20</time></div>
 
         
           <span class="post-tags">
             
-            #<a href="../tags/adguard-home/">AdGuard Home</a>&nbsp;
+            #<a href="../tags/homelab/">homelab</a>&nbsp;
             
-            #<a href="../tags/docker/">Docker</a>&nbsp;
+            #<a href="../tags/networking/">networking</a>&nbsp;
             
-            #<a href="../tags/proxmox/">Proxmox</a>&nbsp;
+            #<a href="../tags/adguard/">adguard</a>&nbsp;
             
-            #<a href="../tags/homelab/">Homelab</a>&nbsp;
+            #<a href="../tags/dns/">dns</a>&nbsp;
             
-            #<a href="../tags/network-security/">Network Security</a>&nbsp;
+            #<a href="../tags/self-hosted/">self-hosted</a>&nbsp;
+            
+            #<a href="../tags/linux/">linux</a>&nbsp;
             
           </span>
         
@@ -259,127 +257,24 @@
 
         <div class="post-content">
           
-            A step-by-step guide to deploying AdGuard Home in a Linux VM using Docker on a Proxmox homelab for network-wide DNS-level ad-blocking.
+            <p>Network-wide ad blocking using AdGuard Home deployed as a VM on ESXi. Blocks ads, trackers, and malicious domains at the DNS level — before they reach any device on the network.</p>
+<hr>
+<h2 id="-environment">🖥️ Environment</h2>
+<ul>
+<li><strong>Hypervisor:</strong> VMware ESXi</li>
+<li><strong>VM OS:</strong> Ubuntu Server 24.04 LTS</li>
+<li><strong>VM Specs:</strong> 3 vCPU, 4 GB RAM, 60GB disk</li>
+<li><strong>AdGuard Home Version:</strong> Latest stable</li>
+</ul>
+<hr>
+<h2 id="-step-1-create-the-vm-on-esxi">🚀 Step 1: Create the VM on ESXi</h2>
+<p>Created a new VM in the ESXi web UI with the following settings:</p>
           
         </div>
 
         
            <div>
-            <a class="read-more button inline" href="../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1-1-1-1/">[Read more]</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h2 class="post-title">
-          <a href="../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1-1-1/">My First Post</a>
-        </h2>
-        <div class="post-meta"><time class="post-date">2026-04-01</time><span class="post-author">Ajaya K C</span></div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="../tags/adguard-home/">AdGuard Home</a>&nbsp;
-            
-            #<a href="../tags/docker/">Docker</a>&nbsp;
-            
-            #<a href="../tags/proxmox/">Proxmox</a>&nbsp;
-            
-            #<a href="../tags/homelab/">Homelab</a>&nbsp;
-            
-            #<a href="../tags/network-security/">Network Security</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-        <div class="post-content">
-          
-            A step-by-step guide to deploying AdGuard Home in a Linux VM using Docker on a Proxmox homelab for network-wide DNS-level ad-blocking.
-          
-        </div>
-
-        
-           <div>
-            <a class="read-more button inline" href="../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1-1-1/">[Read more]</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h2 class="post-title">
-          <a href="../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1-1/">My First Post</a>
-        </h2>
-        <div class="post-meta"><time class="post-date">2026-04-01</time><span class="post-author">Ajaya K C</span></div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="../tags/adguard-home/">AdGuard Home</a>&nbsp;
-            
-            #<a href="../tags/docker/">Docker</a>&nbsp;
-            
-            #<a href="../tags/proxmox/">Proxmox</a>&nbsp;
-            
-            #<a href="../tags/homelab/">Homelab</a>&nbsp;
-            
-            #<a href="../tags/network-security/">Network Security</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-        <div class="post-content">
-          
-            A step-by-step guide to deploying AdGuard Home in a Linux VM using Docker on a Proxmox homelab for network-wide DNS-level ad-blocking.
-          
-        </div>
-
-        
-           <div>
-            <a class="read-more button inline" href="../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1-1/">[Read more]</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h2 class="post-title">
-          <a href="../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1/">My First Post</a>
-        </h2>
-        <div class="post-meta"><time class="post-date">2026-04-01</time><span class="post-author">Ajaya K C</span></div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="../tags/adguard-home/">AdGuard Home</a>&nbsp;
-            
-            #<a href="../tags/docker/">Docker</a>&nbsp;
-            
-            #<a href="../tags/proxmox/">Proxmox</a>&nbsp;
-            
-            #<a href="../tags/homelab/">Homelab</a>&nbsp;
-            
-            #<a href="../tags/network-security/">Network Security</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-        <div class="post-content">
-          
-            A step-by-step guide to deploying AdGuard Home in a Linux VM using Docker on a Proxmox homelab for network-wide DNS-level ad-blocking.
-          
-        </div>
-
-        
-           <div>
-            <a class="read-more button inline" href="../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1/">[Read more]</a>
+            <a class="read-more button inline" href="../posts/proxmox/">[Read more]</a>
           </div>
         
       </article>
@@ -389,10 +284,6 @@
   <div class="pagination__buttons">
     
     
-    
-      <a href="../posts/page/2/" class="button inline next">
-        [<span class="button__text">Older posts</span>] &gt;
-      </a>
     
   </div>
 </div>

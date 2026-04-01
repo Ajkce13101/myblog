@@ -2,43 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/tags/adguard-home/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/docker/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/homelab/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1-1-1-1-1/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1-1-1-1/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1-1-1/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1-1/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1-1/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-2/</loc>
+    <loc>/tags/adguard/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/network-wide-ad-blocking-with-adguard-home-on-proxmox/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/network-security/</loc>
+    <loc>/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/dns/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/homelab/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/networking/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
@@ -49,6 +31,12 @@
   </url><url>
     <loc>/tags/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/proxmox/</loc>
+    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/self-hosted/</loc>
+    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
   </url>

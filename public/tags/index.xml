@@ -9,17 +9,17 @@
     <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AdGuard Home</title>
-      <link>/tags/adguard-home/</link>
+      <title>Adguard</title>
+      <link>/tags/adguard/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/adguard-home/</guid>
+      <guid>/tags/adguard/</guid>
       <description></description>
     </item>
     <item>
-      <title>Docker</title>
-      <link>/tags/docker/</link>
+      <title>Dns</title>
+      <link>/tags/dns/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/docker/</guid>
+      <guid>/tags/dns/</guid>
       <description></description>
     </item>
     <item>
@@ -30,10 +30,17 @@
       <description></description>
     </item>
     <item>
-      <title>Network Security</title>
-      <link>/tags/network-security/</link>
+      <title>Linux</title>
+      <link>/tags/linux/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/network-security/</guid>
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>/tags/networking/</link>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/networking/</guid>
       <description></description>
     </item>
     <item>
@@ -41,6 +48,13 @@
       <link>/tags/proxmox/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
       <guid>/tags/proxmox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Self-Hosted</title>
+      <link>/tags/self-hosted/</link>
+      <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>/tags/self-hosted/</guid>
       <description></description>
     </item>
   </channel>
