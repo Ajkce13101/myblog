@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>My First Post :: Ajaya&#39;s Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A step-by-step guide to deploying AdGuard Home in a Linux VM using Docker on a Proxmox homelab for network-wide DNS-level ad-blocking." />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="../../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-2/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="../../css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="../../css/code.min.c4581949edab7810737609fc5568852bcd908945f14561e366dcd2300a370545.css">
+
+  
+  <link rel="stylesheet" href="../../css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="../../css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="../../css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="../../css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="../../css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
+
+  
+  <link rel="stylesheet" href="../../css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="../../css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="../../css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="../../css/syntax.min.a2cc694a9b481f15d41722bffc2cc54eea4c4f74fd9072b0b33253604c22606e.css">
+
+  
+  <link rel="stylesheet" href="../../css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="../../css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="../../favicon.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="Ajaya K C" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="My First Post">
+<meta property="og:description" content="A step-by-step guide to deploying AdGuard Home in a Linux VM using Docker on a Proxmox homelab for network-wide DNS-level ad-blocking." />
+<meta property="og:url" content="/posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-2/" />
+<meta property="og:site_name" content="Ajaya&#39;s Blog" />
+
+  <meta property="og:image" content="/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2026-04-01 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="../../">
+  <div class="logo">
+    ~/Ajaya $
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="../../about">About</a></li>
+        
+      
+        
+          <li><a href="../../posts">Posts</a></li>
+        
+      
+        
+          <li><a href="../../tags">Tags</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="../../about" >About</a></li>
+        
+      
+        
+          <li><a href="../../posts" >Posts</a></li>
+        
+      
+      
+        <li>
+          <ul class="menu">
+            <li class="menu__trigger">Show more&nbsp;▾</li>
+            <li>
+              <ul class="menu__dropdown">
+                
+                  
+                    <li><a href="../../tags" >Tags</a></li>
+                  
+                
+              </ul>
+            </li>
+          </ul>
+        </li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="../../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-2/">My First Post</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2026-04-01</time><span class="post-author">Ajaya K C</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="../../tags/adguard-home/">AdGuard Home</a>&nbsp;
+      
+      #<a href="../../tags/docker/">Docker</a>&nbsp;
+      
+      #<a href="../../tags/proxmox/">Proxmox</a>&nbsp;
+      
+      #<a href="../../tags/homelab/">Homelab</a>&nbsp;
+      
+      #<a href="../../tags/network-security/">Network Security</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h2 id="introduction">Introduction<a href="#introduction" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>In this post, I will show how I deployed <strong>AdGuard Home</strong> in my home lab environment to achieve network-wide ad-blocking and DNS-level filtering. My homelab runs on <strong>Proxmox</strong>, with AdGuard Home inside a <strong>Docker container</strong> on a Linux virtual machine.</p>
+<p>This setup allows all devices on my network to benefit from ad-blocking, tracking protection, and enhanced DNS management without installing software individually on each device.</p>
+<hr>
+<h2 id="why-adguard-home">Why AdGuard Home?<a href="#why-adguard-home" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>AdGuard Home is an open-source, self-hosted network-wide ad-blocker and DNS resolver. Its key benefits include:</p>
+<ul>
+<li>DNS-level ad-blocking for all devices</li>
+<li>Filtering trackers and malicious domains</li>
+<li>Lightweight and easy to deploy in containers</li>
+<li>Web UI for management and monitoring</li>
+<li>Integration with multiple upstream DNS providers</li>
+</ul>
+<hr>
+<h2 id="homelab-environment">Homelab Environment<a href="#homelab-environment" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Here’s my setup:</p>
+<ul>
+<li><strong>Proxmox VE</strong>: Virtualization host for all lab VMs and containers</li>
+<li><strong>Linux VM</strong>: Debian/Ubuntu virtual machine running Docker</li>
+<li><strong>Docker</strong>: Containerized AdGuard Home deployment</li>
+<li><strong>Network</strong>: Static IP assigned to the VM, integrated with home router for DNS resolution</li>
+</ul>
+<hr>
+<h2 id="step-1-prepare-the-linux-vm">Step 1: Prepare the Linux VM<a href="#step-1-prepare-the-linux-vm" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<ol>
+<li>
+<p>Provision a Linux VM in Proxmox (Debian or Ubuntu recommended).</p>
+</li>
+<li>
+<p>Update the system and install Docker:</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
+</span></span><span class="line"><span class="cl">sudo apt install docker.io docker-compose -y
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> docker --now
+</span></span></code></pre></div><h2 id="step-2-create-a-docker-compose-file-for-adguard-home">Step 2: Create a Docker Compose File for AdGuard Home<a href="#step-2-create-a-docker-compose-file-for-adguard-home" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>On the Linux VM, create a directory for AdGuard Home:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p ~/adguard <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/adguard
+</span></span></code></pre></div><p>Create docker-compose.yml:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">adguardhome</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">adguardhome</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">adguard/adguardhome:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;53:53/tcp&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;53:53/udp&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;80:80/tcp&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;443:443/tcp&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;3000:3000/tcp&#34;</span><span class="w"> </span><span class="c"># optional admin port</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./workdir:/opt/adguardhome/work</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./config:/opt/adguardhome/conf</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">adguard-net</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">adguard-net</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l">bridge</span><span class="w">
+</span></span></span></code></pre></div><h2 id="step-3-start-adguard-home">Step 3: Start AdGuard Home<a href="#step-3-start-adguard-home" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker-compose up -d
+</span></span></code></pre></div><p>Check container logs:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker logs -f adguardhome
+</span></span></code></pre></div><p>Once started, the web UI is available at:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">http://&lt;vm-ip&gt;:3000
+</span></span></code></pre></div><p>Follow the setup wizard to configure:</p>
+<ul>
+<li>Admin credentials</li>
+<li>Upstream DNS servers (e.g., Cloudflare, Google, or Quad9)</li>
+<li>DHCP/DNS integration (optional)</li>
+<li>Blocklists (AdGuard defaults or custom lists)</li>
+</ul>
+<h2 id="step-4-configure-your-network-to-use-adguard">Step 4: Configure Your Network to Use AdGuard<a href="#step-4-configure-your-network-to-use-adguard" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>To enable network-wide ad-blocking:</p>
+<ol>
+<li>Set the DNS on your home router to point to your Linux VM IP.</li>
+<li>Some routers might not allow you to setup custom DNS server, alternatively, configure individual devices to use the VM’s DNS.
+This way, all devices on your network automatically benefit from AdGuard’s filtering.</li>
+</ol>
+<p><img src="../../images/adguard.png" alt="Image Description"></p>
+<h2 id="conclusion">Conclusion<a href="#conclusion" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Running AdGuard Home in a Docker container inside a Linux VM on Proxmox gives you a robust, network-wide DNS-level ad-blocker. It’s lightweight, self-contained, and fully customizable, making it perfect for a homelab environment.</p>
+<p>This setup allows me to:</p>
+<ul>
+<li>Block ads and trackers across all devices</li>
+<li>Manage DNS centrally</li>
+<li>Easily maintain and update via Docker</li>
+<li>Integrate with other homelab services like WireGuard and MeshCentral</li>
+</ul>
+
+      </div></div>
+
+  
+    
+<div class="pagination">
+  <div class="pagination__title">
+    <span class="pagination__title-h">Read other posts</span>
+    <hr />
+  </div>
+  <div class="pagination__buttons">
+    
+      <a href="../../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox-1/" class="button inline prev">
+        &lt; [<span class="button__text">My First Post</span>]
+      </a>
+    
+    
+      ::
+    
+    
+      <a href="../../posts/network-wide-ad-blocking-with-adguard-home-on-proxmox/" class="button inline next">
+         [<span class="button__text">My First Post</span>] &gt;
+      </a>
+    
+  </div>
+</div>
+
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2026 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="../../bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

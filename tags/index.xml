@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My New Hugo Project</title>
-    <link>https://example.org/tags/</link>
-    <description>Recent content in Tags on My New Hugo Project</description>
+    <title>Tags on Ajaya&#39;s Blog</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Ajaya&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AdGuard Home</title>
-      <link>https://example.org/tags/adguard-home/</link>
+      <link>/tags/adguard-home/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://example.org/tags/adguard-home/</guid>
+      <guid>/tags/adguard-home/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>https://example.org/tags/docker/</link>
+      <link>/tags/docker/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://example.org/tags/docker/</guid>
+      <guid>/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Homelab</title>
-      <link>https://example.org/tags/homelab/</link>
+      <link>/tags/homelab/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://example.org/tags/homelab/</guid>
+      <guid>/tags/homelab/</guid>
       <description></description>
     </item>
     <item>
       <title>Network Security</title>
-      <link>https://example.org/tags/network-security/</link>
+      <link>/tags/network-security/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://example.org/tags/network-security/</guid>
+      <guid>/tags/network-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Proxmox</title>
-      <link>https://example.org/tags/proxmox/</link>
+      <link>/tags/proxmox/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://example.org/tags/proxmox/</guid>
+      <guid>/tags/proxmox/</guid>
       <description></description>
     </item>
   </channel>
